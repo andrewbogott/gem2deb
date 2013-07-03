@@ -234,7 +234,7 @@ module Gem2Deb
 
     def run_tests(rubyver)
       if skip_checks?
-        return
+        return true
       end
       if File::exists?('debian/ruby-test-files.yaml')
         puts "Running tests for #{rubyver} using gem2deb test runner and debian/ruby-test-files.yaml..."
